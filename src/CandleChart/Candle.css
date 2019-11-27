@@ -52,7 +52,7 @@
 }
 
 .candle-bar-increase {
-    background: #00a771;
+    background: darkcyan;
 }
 
 .candle-bar-decrease {
@@ -75,4 +75,8 @@
 
 .candle-base-line-default {
     background: lightgray;
+}
+
+.candle-volume-bar-default {
+    background: orange;
 }

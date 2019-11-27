@@ -1,6 +1,6 @@
 {
-  "name": "react-light-chart",
-  "version": "1.0.2",
+  "name": "react-candle-chart",
+  "version": "0.6.0",
   "description": "A simple and light library to draw charts.",
   "main": "./dist/index.js",
   "typings": "./dist/index.d.ts",
@@ -20,11 +20,8 @@
     "chart",
     "react chart",
     "Candle chart",
-    "area chart",
-    "simple chart",
-    "vertical chart",
-    "vertical candle chart",
-    "vertical area chart"
+    "candle chart",
+    "simple candle chart"
   ],
   "author": "MohammadReza Azarang",
   "license": "ISC",
