@@ -1,0 +1,78 @@
+.candle {
+    flex: 1;
+    transition: ease-in .3s;
+    border: solid 1px rgba(.5, .5, .8, 0);
+    background: rgba(.5, .5, .8, 0);
+    padding: 1px;
+    position: relative;
+    opacity: .7;
+}
+
+.candle:hover {
+    transition: ease-out .05s;
+    border-color: rgba(.5, .5, .8, .1);
+    outline: solid 3px rgba(.5, .5, .8, .1);
+    background: rgba(.5, .5, .8, .05);
+    opacity: 1;
+}
+
+.candle-base-line {
+    position: absolute;
+    left: 50%;
+    width: 2px;
+    transform: translateX(-50%);
+    transition: ease-in .05s;
+}
+
+.candle:hover > .candle-base-line {
+    width: 4px;
+}
+
+.candle-bar {
+    position: absolute;
+    left: 50%;
+    width: 70%;
+    transform: translateX(-50%);
+    transition: ease-in .05s;
+    border-radius: 4px;
+}
+
+.candle-tooltip {
+    position: absolute;
+    display: inline-block;
+    left: calc(100% + 5px);
+    z-index: 999999;
+    opacity: 0;
+    top: 0;
+    transition: ease-in-out .1s;
+}
+
+.candle:hover > .candle-tooltip {
+    opacity: 1;
+}
+
+.candle-bar-increase {
+    background: #00a771;
+}
+
+.candle-bar-decrease {
+    background: #ee002f;
+}
+
+.candle-tooltip-right {
+    left: unset;
+    right: calc(100% + 5px);
+}
+
+.candle-tooltip-default {
+    border-radius: 4px;
+    padding: 5px;
+    min-width: 100px;
+    background: white;
+    color: black;
+    border: solid 2px deepskyblue;
+}
+
+.candle-base-line-default {
+    background: lightgray;
+}
