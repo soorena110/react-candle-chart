@@ -1,4 +1,4 @@
-export const shortenNumber = (number: number | string, toFix = 3, minimumValue = 1000) => {
+export const shortenNumber = (number: number | string, toFix = 3, minimumValue = 1000 * 1000) => {
     if (typeof number == 'string')
         number = Number(number);
 
@@ -11,8 +11,7 @@ export const shortenNumber = (number: number | string, toFix = 3, minimumValue =
         if (number < 1000) {
             inputNumberPostFix = numberPostfixes[i];
             break;
-        }
-        else
+        } else
             number /= 1000;
 
     return `${number.toFixed(toFix)} ${inputNumberPostFix}`;

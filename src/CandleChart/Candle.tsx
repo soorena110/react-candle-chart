@@ -2,6 +2,7 @@ import * as React from 'react';
 import {ReactNode} from 'react';
 import {CandleClassNamesInfo, CandleInfo} from "./models";
 import './Candle.css';
+import {shortenNumber} from "../Common/NumberFormat";
 
 interface Props {
     maxPrice: number;
@@ -15,7 +16,6 @@ interface Props {
 }
 
 const candlesHeightPercent = 70;
-const gapPercent = 5;
 const volumeBarsHeightPercent = 25;
 
 export default class Candle extends React.Component<Props> {
@@ -70,11 +70,11 @@ export default class Candle extends React.Component<Props> {
             return <span className={className}>{this.props.renderTooltip(candle)}</span>;
 
         return <span className={className + ' candle-tooltip-default'}>
-            <div>closing: {candle.closing}</div>
-            <div>opening: {candle.opening}</div>
-            <div>high: {candle.high}</div>
-            <div>low: {candle.low}</div>
-            <div>volume: {candle.volume}</div>
+            <div>closing: {shortenNumber(candle.closing)}</div>
+            <div>opening: {shortenNumber(candle.opening)}</div>
+            <div>high: {shortenNumber(candle.high)}</div>
+            <div>low: {shortenNumber(candle.low)}</div>
+            <div>volume: {shortenNumber(candle.volume)}</div>
         </span>
     }
 

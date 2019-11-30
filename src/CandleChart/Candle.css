@@ -34,7 +34,7 @@
     width: 70%;
     transform: translateX(-50%);
     transition: ease-in .05s;
-    border-radius: 4px;
+    border-radius: 2px;
 }
 
 .candle-tooltip {
